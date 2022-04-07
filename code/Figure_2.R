@@ -10,13 +10,13 @@ p1 <- all_data %>%
   mutate(R = sqrt(rsquared(main_rel_exp, main_rel_af))) %>% 
   ggplot() +
   geom_point(aes(main_rel_af, main_rel_exp), size = rel(0.3),stroke = 0, alpha = 0.3) +
-  scale_x_continuous(limits = c(0,2)) +
-  scale_x_continuous(limits = c(0,2)) +
+  scale_x_continuous(limits = c(0,2.2)) +
+  scale_y_continuous(limits = c(0,2.2)) +
   geom_abline(slope = 1, intercept = 0, color = "orange") +
   geom_text(
     aes(
       x = 0, 
-      y = 2, 
+      y = 2.2, 
       label = paste0("R = ", sprintf("%.2f",round(R,2)))
     ),
     hjust = 0,
@@ -37,7 +37,7 @@ p2 <- all_data %>%
   ggplot() +
   geom_point(aes(main_rel_af, main_rel_exp), size = rel(0.3),stroke = 0, alpha = 0.3) +
   scale_x_continuous(limits = c(0,2)) +
-  scale_x_continuous(limits = c(0,2)) +
+  scale_y_continuous(limits = c(0,2)) +
   geom_abline(slope = 1, intercept = 0, color = "orange") +
   geom_text(
     aes(

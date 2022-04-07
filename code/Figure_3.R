@@ -7,6 +7,15 @@ plot_data <- all_data %>%
   group_by(dataset, Mer, group) %>%
   mutate(n = n())
 
+dataset_names <- c(
+  "all_100" = "100%",
+  "hi_99" = ">99%, <100%, <1.5Å",
+  "lo_99" = ">99%, <100%, 1.5-2.0Å")
+
+error_names <- c(
+  "abs" = "Absolute error",
+  "signed" = "Signed deviation")
+
 af_average <- function(df) {
   
   df %>% 

@@ -1,4 +1,4 @@
-all_data <- read_csv("data/processed/all_data.csv")
+all_data <- read_csv("data/all_data.csv")
 
 dataset_names <- c(
   "all_100" = "100%",
